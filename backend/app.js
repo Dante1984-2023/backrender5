@@ -5,7 +5,7 @@ const cors = require("cors");
 require("dotenv").config();
 const authenticateToken = require("./auth/authenticateToken");
 const log = require("./lib/trace");
-const Producto = require('./model/userModels.tsx');
+const Producto = require('./model/userModels');
 // middleware
 const corsOptions = {
     origin: "https://galmesfinal.netlify.app" // frontend URI (ReactJS)
@@ -35,7 +35,7 @@ app.use("/api/user", authenticateToken, require("./routes/user"));
 
 
 app.get('/', (req, res) => {
-    res.send(`<h1>Soy el Back del CARRITO3</h1>`)
+    res.send( `<h1>Soy el Back del CARRITO3</h1>`)
 });
 
 app.post('/productocarrito', async (req, res) => {

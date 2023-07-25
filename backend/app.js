@@ -8,7 +8,7 @@ const log = require("./lib/trace");
 const Producto = require('./model/userModels');
 // middleware
 const corsOptions = {
-    origin: "https://galmesfinal2.netlify.app" // frontend URI (ReactJS)
+    origin: "http://localhost:5173" // frontend URI (ReactJS)
 }
 app.use(express.json());
 app.use(cors(corsOptions));

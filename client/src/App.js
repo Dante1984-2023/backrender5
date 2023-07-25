@@ -5,7 +5,7 @@ function App() {
 
   // Fetching message from backend on mount
   useEffect(() => {
-    fetch("https://back13-mq8v.onrender.com")
+    fetch("http://localhost:4200")
       .then((res) => res.json())
       .then((data) => setMessage(data.message));
   }, []);
